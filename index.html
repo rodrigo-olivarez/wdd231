@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index Page</title>
+    <meta name="description" content="On this page we will shape our personal page as our first activity, showing part of my learning from other subjects to have this chamber of commerce.">
+    <meta name="author" content="Jose Rodrigo Olivarez Marcelino">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/index-large.css">
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/course.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Iosevka+Charon+Mono:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="images/laptop.svg" alt="logo site" width="512" height="512">
+        <span>Rodrigo Olivarez Marcelino</span>
+        <button id="ham-btn" class="hamburger"></button>
+        <nav id="nav-bar" class="navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Chamber Project</a></li>
+                <li><a href="#">Final Project</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Home</h1>
+        <section class="about-me">
+            <h2>About Me</h2>
+            <p>My name is Rodrigo, I was born in Veracruz and live in CDMX for 5 years. I am working in the Mexico City Temple, my area
+            is the laundry. I love the musicals and the cinema, eventually I learn new hobbies like crochet, piano and guitar. The
+            weekends I speeding my time in the Zocalo or Museums.</p>
+        </section>
+        <section class="student">
+            <h2>Student Photo</h2>
+            <img src="images/profile.jpg" alt="Student photo" width="360px" height="360px">
+        </section>
+        <section>
+            <h2>Web Certificate Courses</h2>
+            <nav class="course-nav">
+                <a href="#">All Courses</a>
+                <a href="#">WDD Courses</a>
+                <a href="#">CSE Courses</a>
+            </nav>
+            <p>The total number of course listed below is </p>
+            <div class="courses">
+
+            </div>
+
+        </section>
+    </main>
+    <footer>
+        <div class="social">
+            <a href="" target="_blank"><img src="images/github.svg" alt="GitHub" width="16" height="16"></img>
+            </a>
+            <a href="" target="_blank"><img src="images/linkedin.svg" alt="Linkedin" width="16" height="16"></img>
+            </a>
+            <a href="" target="_blank"><img src="images/facebook.svg" alt="Facebook" width="16" height="16"></img>
+            </a>
+        </div>
+        <p>&copy;<span id="currentYear"></span> - Jose Rodrigo Olivarez Marcelino - CDMX</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
