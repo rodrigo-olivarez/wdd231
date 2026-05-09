@@ -1,27 +1,72 @@
-@media only screen and (min-width: 608px) {
+@media only screen and (min-width: 768px) {
+    /************ HEADER **********/
     .hamburger {
             display: none;
         }
     
     header {
-        grid-template-columns: 24px auto;
-    }
-    
-    header, main, nav, footer {
-        max-width: 900px;
-        margin: 0 auto;
+        grid-template-columns: 20px auto;
     }
     
     .navigation {
         display: block;
-        border-bottom: solid 1px #eee;
+        grid-column: 1/-1;
+        background-color: #18508f;
+        margin-top: 15px;
     }
     
     .navigation ul {
         display: flex;
+        max-width: 1000px;
     }
     
     .navigation a {
-        border: none;
+        color: #ddd;
+        padding: 10px 20px;
+        border-bottom: none;
+    }
+
+    .navigation a:hover{
+        background-color: #202223;
+    }
+
+    /************ MAIN **********/
+    main {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 20px;
+        margin: 0 auto;
+        padding: 5px;
+    }
+
+    main > section:last-of-type {
+        width: 100%;
+        grid-column: 1/-1;
+    }
+
+    h1 {
+        grid-column: 1/-1;
+        margin: 0;
+    }
+
+    .courses {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+        width: 100%;
+        padding: 20px;
+        border-top: none;
+    }
+
+    .course-nav {
+        display: flex;
+        background-color: #ddd;
+        padding: 20px;
+        margin-bottom: 0;
+    }
+
+    footer {
+        border-top: 2px solid #202223;
+        margin-top: 40px;
     }
 }

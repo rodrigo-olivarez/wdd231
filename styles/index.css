@@ -89,21 +89,68 @@ section {
 
 h2 {
     text-align: center;
-    background: #202223;
-    color: #ccc;
+    background: #18508f;
+    color: #ffffff;
 }
 
 p {
     padding: 0px 10px 20px 10px;
 }
 
-.student img {
-    padding: 10px 20px;
-
+.student {
+    max-width: 300px;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 10px;
 }
 
+.student img {
+    border-radius: 10px;
+    max-width: 90%;
+    margin: 10px auto;
+    display: block;
+}
 
+.course-nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
 
+.course-nav a {
+    text-decoration: none;
+    color: black;
+    background-color: #c4c4c4;
+    padding: 10px 30px;
+    border: 2px solid #333;
+    border-radius: 12px;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+.courses {
+    display: flex;
+    flex-direction: column;
+    /* Esto hace que se vean en filas */
+    gap: 8px;
+    max-width: 500px;
+    /* Ajusta según tu diseño */
+    margin: 0 auto;
+}
+
+.course-card {
+    background-color: #c4c4c4;
+    border: 1px solid #777;
+    padding: 12px;
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: 500;
+}
+
+section p {
+    text-align: center;
+}
 /************ FOOTER **********/
 footer {
     background-color: #eee;
@@ -115,6 +162,7 @@ footer {
     display: flex;
     justify-content: center;
     column-gap: 8px;
+    gap: 20px;
 }
 
 .social a {
@@ -123,13 +171,12 @@ footer {
     align-items: center;
     width: 44px;
     height: 44px;
-    border: #ccc solid 1px;
     border-radius: 22px;
 }
 
 .social img {
-    width: 22px;
-    height: 22px;
+    width: 44px;
+    height: 44px;
 }
 
 .social a:hover {
