@@ -73,11 +73,11 @@ header span {
 }
 
 .navigation a:hover {
-    background-color: #18508f;
+    background-color: #dddddd;
 }
 
 h1 {
-    margin-left: 1px 10px;
+    margin-left: 10px;
     color: #18508f;
 
 }
