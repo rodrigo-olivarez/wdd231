@@ -1,0 +1,89 @@
+/* -------------COLOR SHAME------------
+Primary Color: #004e91
+Secondary Color: #97cff2
+Background Color: #ddddd 
+Text Color: #000000 
+Font Family: Georgia, Times, serif
+*/
+/************ SITE WIDE **********/
+* {
+    font-family: Georgia, Times, serif;
+    box-sizing: border-box;
+}
+
+/************ HEADER **********/
+header {
+    display: grid;
+    grid-template-columns: 24px auto 44px;
+    padding: 5px 0 5px 10px;
+    align-items: end;
+    border-bottom: solid 1px #504747;
+    column-gap: 8px;
+}
+
+header img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+header span {
+    font-size: 1.2rem;
+    color: #004e91;
+}
+/************ HAMBURGUER NAVIGATION **********/
+
+.hamburger {
+    background: none;
+    border: none;
+    color: #004e91;
+    cursor: pointer;
+}
+
+.hamburger::before {
+    content: "\2630";
+}
+
+.hamburger.show::before {
+    content: "\00D7";
+}
+
+/************ NAV **********/
+
+.navigation {
+    display: none;
+}
+
+.navigation.show {
+    display: block;
+}
+
+.navigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation a {
+    display: block;
+    padding: .8rem 10px;
+    color: #000000;
+    text-decoration: none;
+    border-bottom: solid 1px #ddd;
+}
+
+.navigation li.current {
+    background-color: #eee;
+}
+
+.navigation a:hover {
+    background-color: #004e91;
+}
+
+h1 {
+    margin-left: 1rem 10px;
+    color: #004e91;
+
+}
+
+/************ FOOTER **********/
