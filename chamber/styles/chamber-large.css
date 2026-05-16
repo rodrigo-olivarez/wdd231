@@ -6,7 +6,12 @@
     }
 
     header {
-        grid-template-columns: 20px auto;
+        grid-template-columns: 40px auto;
+        padding: 10px;
+    }
+
+    header span {
+        font-size: 1.5rem;
     }
 
     .navigation {
@@ -31,23 +36,20 @@
         background-color: #202223;
     }
 
-    /************ MAIN **********/
-    main {
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-        gap: 20px;
-        margin: 0 auto;
-        padding: 5px;
+    #members-container.grid {
+        grid-template-columns: repeat(3, 1fr);
     }
 
-    main>section:last-of-type {
-        width: 100%;
-        grid-column: 1/-1;
+    #members-container.list .member-card{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 3rem;
     }
 
-    h1 {
-        grid-column: 1/-1;
-        margin: 0;
+    #members-container.list .member-card img {
+        width: 150px;
+        height: 150px;
     }
 
     footer {
