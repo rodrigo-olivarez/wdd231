@@ -89,13 +89,20 @@ h1 {
 .menu {
     margin: 1rem auto;
     padding: 0.5rem;
-    background-color: #504747;
     text-align: center;
 }
 
 .menu button {
     padding: 0.5rem 1rem;
     font-weight: 700;
+    border-radius: 8px;
+    background-color: #004e91;
+    color: #fff;
+}
+
+.menu button:hover {
+    background-color: #97cff2;
+    color: #000000;
 }
 
 section {
