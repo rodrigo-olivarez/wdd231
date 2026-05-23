@@ -3,7 +3,7 @@
         "name": "Tecno Repair",
         "address": "Av. Manuel Ávila Camacho #142, Malecon,Ver.",
         "phone": "55 1234 5678",
-        "website": "https://www.technorepair.com",
+        "website": "www.technorepair.com",
         "image": "Tecno_Repair.jpg",
         "membership": 3,
         "email": "contact@tecnorepair.com"
@@ -12,7 +12,7 @@
         "name": "Xtreme Fitness",
         "address": "Calle Mariano Arista #548, Centro, Ver",
         "phone": "22 8987 6543",
-        "website": "https://www.xtremefitness.com",
+        "website": "www.xtremefitness.com",
         "image": "Xtreme_Fit.jpg",
         "membership": 2,
         "email": "info@xtremefit.com"
@@ -21,7 +21,7 @@
         "name": "Tutoring Academy",
         "address": "Av. Urano #210, Costa verde, Ver.",
         "phone": "22 9112 3456",
-        "website": "https://www.tutoringacademy.com",
+        "website": "www.tutoringacademy.com",
         "image": "Tutoring_Academy.jpg",
         "membership": 2,
         "email": "info@tutoringacademy.com"
@@ -30,7 +30,7 @@
         "name": "John Law Firm",
         "address": "Av. Ignacio de la Llave #805, Centro, Ver.",
         "phone": "81 2345 6789",
-        "website": "https://www.johnlaw.com",
+        "website": "www.johnlaw.com",
         "image": "John_Law.jpg",
         "membership": 1,
         "email": "office@johnlaw.com"
@@ -39,7 +39,7 @@
         "name": "Bruce Car Repair",
         "address": "Oriente 6 #321, Centro, Ver.",
         "phone": "33 9876 5432",
-        "website": "https://www.brucerepair.com",
+        "website": "www.brucerepair.com",
         "image": "Bruce_Repair.jpg",
         "membership": 3,
         "email": "service@brucecarrep.com"
@@ -48,7 +48,7 @@
         "name": "Toñita Restaurant",
         "address": " Avenida 3 #405, Centro, Ver.",
         "phone": "92 1456 7890",
-        "website": "https://www.toñitarestaurant.com",
+        "website": "www.toñitarestaurant.com",
         "image": "Toñita_Restaurant.jpg",
         "membership": 2,
         "email": "info@toñitarestaurant.com"
@@ -57,7 +57,7 @@
         "name": "Bros Barber",
         "address": "Calle 10 de Mayo #114, Obrera, Ver.",
         "phone": "27 1123 4567",
-        "website": "https://www.brosbarbers.com",
+        "website": "www.brosbarbers.com",
         "image": "Bros_Barber.jpg",
         "membership": 1,
         "email": "info@brosbarber.com"

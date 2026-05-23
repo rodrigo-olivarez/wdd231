@@ -4,11 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page | Veracruz Chamber of Commerce</title>
-    <meta name="description" content="Browse the Veracruz Chamber of Commerce business directory. Find local member businesses, contact information, and membership levels.">
+    <meta name="description" content="Browse the Veracruz Chamber of Commerce. Discover local businesses, upcoming events, current weather, and membership opportunities in Veracruz, Mexico">
     <meta name="author" content="Jose Rodrigo Olivarez Marcelino">
     <link rel="stylesheet" href="styles/chamber.css">
     <link rel="stylesheet" href="styles/chamber-large.css">
-    <script src="scripts/chamber.js" defer></script>
     <script src="scripts/index.js" defer></script>
     <link rel="icon" href="favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,7 +16,7 @@
         href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Finlandica+Headline:ital,wght@0,100..900;1,100..900&family=Iosevka+Charon+Mono:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
     <meta property="og:title" content="Veracruz Chamber of Commerce - bussiness Directory">
-    <meta property="og:description" content="Explore the Veracruz Chamber of Commerce directory. I show the locals, services and opportunities in this beautiful part of Mexico.">
+    <meta property="og:description" content="Explore the Veracruz Chamber of Commerce and connect with local bussiness. Explore events, weather updates, and member spotlights from our vibrant business community."">
     <meta property="og:image" content="https://rodrigo-olivarez.github.io/wdd231/chamber/images/Llegada-Veracruz.webp">
     <meta property="og:url" content="https://rodrigo-olivarez.github.io/wdd231/chamber/directory.html">
 </head>
@@ -28,8 +27,8 @@
         <button id="ham-btn" class="hamburger"></button>
         <nav id="nav-bar" class="navigation">
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Directory</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
                 <li><a href="#">Join</a></li>
                 <li><a href="#">Discover</a></li>
             </ul>
@@ -37,19 +36,20 @@
     </header>
     <main>
         <div class="hero">
-            <img src="images/banner_ver.webp" alt="Veracruz view" width="750" height="500">
+            <img src="images/banner_ver.webp" alt="Veracruz view">
             <a href="#" class="join-btn">Join Us</a>
         </div>
-        <section class="events">
-            <h2>EVENTS</h2>
-            <div class="event-card">
-                <h3>Bussiness Networking Night</h3>
-                <p>📅September 25, 2026</p>
-                <p>📍Coatzacoalcos Convention Center</p>
-                <p>Join us!!! We will have special guests and famous business leaders.</p>
-            </div>
-        </section>
-        <section class="weather">
+        <h1>HOME</h1>
+        <div class="events-weather">
+            <section class="events">
+                <h2>EVENTS</h2>
+                <div class="event-card">
+                    <h3>Bussiness Networking Night</h3>
+                    <p>📅September 25, 2026</p>
+                    <p>📍Coatzacoalcos Convention Center</p>
+                    <p>Join us!!! We will have special guests and famous business leaders.</p>
+                </div>
+            </section>
             <div class="current-weather">
                 <h2>CURRENT WEATHER</h2>
                 <div id="weather-data"></div>
@@ -58,7 +58,7 @@
                 <h2>WEATHER FORECAST</h2>
                 <div id="forecast-data"></div>
             </div>
-        </section>
+        </div>
         <section class="spotlights">
             <div id="spotlights-cont"></div>
         </section>
