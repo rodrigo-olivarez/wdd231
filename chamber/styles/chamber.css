@@ -137,6 +137,122 @@ section {
     height: 200px;
     border-radius: 10px;
 }
+
+/************ INDEX-MAIN **********/
+.hero{
+    position: relative;
+}
+
+.hero img{
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.join-btn{
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    background-color: #004e91;
+    color: #fff;
+    padding: 1rem 1.5rem;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.join-btn::hover{
+    background-color: #97cff2;
+    color: #000000;
+}
+
+.events{
+    background-color: #004e91;
+    margin-top: 0.5rem;
+}
+
+.events h2, .current-weather h2,
+.weather-forecast h2{
+    text-align: center;
+    color: #fff;
+    margin:0 0 1rem 0;
+}
+
+.event-card{
+    background-color: #fff;
+    color: #000000;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.event-card h3{
+    color: #004e91;
+    margin: 0 0 1rem 0;
+}
+
+.weather{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.current-weather, .weather-forecast{
+    background-color: #004e91;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+#weather-data{
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    align-items: start;
+    gap: 0.5rem;
+}
+
+#weather-data img{
+    grid-row: 1/6;
+    width: 80px;
+    height: 80px;
+}
+
+#weather-data p{
+    margin: 0.2rem 0;
+    width: 100%;
+}
+
+#forecast-data{
+    font-size: 25px;
+}
+
+.spotlights{
+    margin: 1rem 0;
+}
+
+#spotlights-cont{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.spotlight-card{
+    background-color: #fff;
+    border: 1px solid #97cff2;
+    padding: 1rem;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.spotlight-card img{
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 6px;
+}
 /************ FOOTER **********/
 footer {
     background-color: #004e91;
