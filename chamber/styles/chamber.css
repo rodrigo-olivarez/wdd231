@@ -229,6 +229,11 @@ section {
     border-radius: 10px;
 }
 
+.spotlights h2{
+    color: #004e91;
+    text-align: center;
+}
+
 #spotlights-cont{
     display: flex;
     flex-direction: column;
