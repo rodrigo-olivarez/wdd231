@@ -132,10 +132,8 @@ p {
 .courses {
     display: flex;
     flex-direction: column;
-    /* Esto hace que se vean en filas */
     gap: 8px;
     max-width: 500px;
-    /* Ajusta según tu diseño */
     margin: 0 auto;
 }
 
@@ -150,6 +148,26 @@ p {
 
 section p {
     text-align: center;
+}
+
+dialog{
+    background-color: beige;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 10px;
+    border: 1px solid #18508f;
+}
+
+::backdrop{
+    background-color: rgb(0, 0, 0 / 50%);
+}
+
+dialog button {
+    position: absolute;
+    top: 23px;
+    right: 23px;
+    padding: .5rem 1rem;
+    border: 1px solid rgb(0 0 0 / 10%);
 }
 /************ FOOTER **********/
 footer {
