@@ -93,6 +93,34 @@
         height: 150px;
     }
 
+    /************ JOIN **********/
+    .join-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        padding: 1rem;
+    }
+
+    .membership-card{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .card{
+        margin-bottom: 0;
+    }
+
+    form{
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .thankyou-info{
+        max-width: 600px;
+        margin: 1rem auto;
+    }
+    /************ FOOTER **********/
     footer {
         border-top: 2px solid #202223;
         margin-top: 40px;

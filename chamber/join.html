@@ -3,22 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Directory | Veracruz Chamber of Commerce</title>
-    <meta name="description" content="Browse the Veracruz Chamber of Commerce business directory. Find local member businesses, contact information, and membership levels.">
+    <title>Join | Veracruz Chamber of Commerce</title>
+    <meta name="description" content="Join the Veracruz Chamber of Commerce. Apply for membership and connect with local bussiness in Veracruz, Mexico">
     <meta name="author" content="Jose Rodrigo Olivarez Marcelino">
     <link rel="stylesheet" href="styles/chamber.css">
     <link rel="stylesheet" href="styles/chamber-large.css">
-    <script src="scripts/chamber.js" defer></script>
+    <script src="scripts/join.js" defer></script>
     <link rel="icon" href="favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Finlandica+Headline:ital,wght@0,100..900;1,100..900&family=Iosevka+Charon+Mono:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-    <meta property="og:title" content="Veracruz Chamber of Commerce - bussiness Directory">
-    <meta property="og:description" content="Explore the Veracruz Chamber of Commerce directory. I show the locals, services and opportunities in this beautiful part of Mexico.">
+    <meta property="og:title" content="Join the Veracruz Chamber of Commerce">
+    <meta property="og:description" content="Apply for membership and become part of the Veracruz bussiness comunity.Choose from NP, Bronze, Silver, or Gold membership levels.">
     <meta property="og:image" content="https://rodrigo-olivarez.github.io/wdd231/chamber/images/Llegada-Veracruz.webp">
-    <meta property="og:url" content="https://rodrigo-olivarez.github.io/wdd231/chamber/directory.html">
+    <meta property="og:url" content="https://rodrigo-olivarez.github.io/wdd231/chamber/join.html">
 </head>
 <body>
     <header>
@@ -36,106 +36,110 @@
     </header>
     <main>
         <h1>Join the Veracruz Chamber of Commerce</h1>
-
-        <form method="get" action="thankyou.html">
-
-            <label for="firstName">First Name
-                <input type="text" id="firstName" name="firstName" title="First Name" autocomplete="given-name" required>
-            </label>
-
-            <label for="lastName">Last Name
-                <input type="text" id="lastName" name="lastName" title="Last Name" autocomplete="family-name" required>
-            </label>
-
-            <label for="orgTitle">Organizational Name
-                <input type="text" id="orgTitle" name="orgTitle" title="Organizational Title" autocomplete="organization-title" pattern="[A-Za-z\-]{7,}" required>
-            </label>
-
-            <label for="email">Email
-                <input type="text" id="name" name="email" title="Email" autocomplete="email" placeholder="User45@gmail.com" required>
-            </label>
-
-            <label for="phone">Mobile Phone
-                <input type="tel" id="phone" name="phone" title="Mobile Phone" autocomplete="tel" required>
-            </label>
-
-            <label for="organization">Bussiness/Organization Name
-                <input type="text" id="organization" name="organization" title="Organization Name" autocomplete="organization" required>
-            </label>
-
-            <label for="membership">Membership Level
-                <select name="membership" id="membership" title="Membership Level">
-                    <option value="">Select a level</option>
-                    <option value="np">NP Membership (Non profit, No fee)</option>
-                    <option value="bronze">Bronze Membership</option>
-                    <option value="silver">Silver Membership</option>
-                    <option value="gold">Gold Membership</option>
-                </select>
-            </label>
-
-            <label for="description">Bussiness Description
-                <textarea name="description" id="descrition" title="Bussiness Description"></textarea>
-            </label>
-
-            <input type="hidden" id="timestamp" name="timestamp">
-
-            <button type="submit">Submit</button>
-        </form>
-
-        <section class="membership-card">
-            <h1>Membership Levels</h1>
-            <div class="card">
-                <h2>Non Profit Membership level</h2>
-                <button class="modal-btn" data-modal="modal-np">Learn More</button>
-            </div>
-            <div class="card">
-                <h2>Bronze Membership Level</h2>
-                <button class="modal-btn" data-modal="modal-bronze">Learn More</button>
-            </div>
-            <div class="card">
-                <h2>Silver Membership Level</h2>
-                <button class="modal-btn" data-modal="modal-silver">Learn More</button>
-            </div>
-            <div class="card">
-                <h2>Gold Membership Level</h2>
-                <button class="modal-btn" data-modal="modal-gold">Learn More</button>
-            </div>
-        </section>
+        <div class="join-container">
+            <form method="get" action="thankyou.html">
+    
+                <label for="firstName">First Name
+                    <input type="text" id="firstName" name="firstName" title="First Name" autocomplete="given-name" required>
+                </label>
+    
+                <label for="lastName">Last Name
+                    <input type="text" id="lastName" name="lastName" title="Last Name" autocomplete="family-name" required>
+                </label>
+    
+                <label for="orgTitle">Organizational Name
+                    <input type="text" id="orgTitle" name="orgTitle" title="Organizational Title" autocomplete="organization-title" pattern="[A-Za-z\-]{7,}" required>
+                </label>
+    
+                <label for="email">Email
+                    <input type="text" id="email" name="email" title="Email" autocomplete="email" placeholder="User45@gmail.com" required>
+                </label>
+    
+                <label for="phone">Mobile Phone
+                    <input type="tel" id="phone" name="phone" title="Mobile Phone" autocomplete="tel" required>
+                </label>
+    
+                <label for="organization">Bussiness/Organization Name
+                    <input type="text" id="organization" name="organization" title="Organization Name" autocomplete="organization" required>
+                </label>
+    
+                <label for="membership">Membership Level
+                    <select name="membership" id="membership" title="Membership Level">
+                        <option value="">Select a level</option>
+                        <option value="np">NP Membership (Non profit, No fee)</option>
+                        <option value="bronze">Bronze Membership</option>
+                        <option value="silver">Silver Membership</option>
+                        <option value="gold">Gold Membership</option>
+                    </select>
+                </label>
+    
+                <label for="description">Bussiness Description
+                    <textarea name="description" id="description" title="Bussiness Description"></textarea>
+                </label>
+    
+                <input type="hidden" id="timestamp" name="timestamp">
+    
+                <button type="submit">Submit</button>
+            </form>
+    
+            <section class="membership-card">
+                <h1>Membership Levels</h1>
+                <div class="card">
+                    <h2>Non Profit Membership level</h2>
+                    <button class="modal-btn" data-modal="modal-np">Learn More</button>
+                </div>
+                <div class="card">
+                    <h2>Bronze Membership Level</h2>
+                    <button class="modal-btn" data-modal="modal-bronze">Learn More</button>
+                </div>
+                <div class="card">
+                    <h2>Silver Membership Level</h2>
+                    <button class="modal-btn" data-modal="modal-silver">Learn More</button>
+                </div>
+                <div class="card">
+                    <h2>Gold Membership Level</h2>
+                    <button class="modal-btn" data-modal="modal-gold">Learn More</button>
+                </div>
+            </section>
+        </div>
 
         <dialog id="modal-np">
             <h2>NP Membership</h2>
             <p>For non-profit organization with no membership fee.</p>
             <ul>
-                <li></li>
-                <li></li>
-                <li></li>
+                <li>Monthly newsletter</li>
+                <li>Access to networking events</li>
+                <li>Directory listing</li>
             </ul>
             <button class="close-modal">Close</button>
         </dialog>
         <dialog id="modal-bronze">
             <h2>Bronze Membership</h2>
             <ul>
-                <li></li>
-                <li></li>
-                <li></li>
+                <li>Social media promotion</li>
+                <li>10% discount on events</li>
+                <li>Monthly newsletter</li>
+                <li>Directory listing</li>
             </ul>
             <button class="close-modal">Close</button>
         </dialog>
         <dialog id="modal-silver">
             <h2>Silver Membership</h2>
             <ul>
-                <li></li>
-                <li></li>
-                <li></li>
+                <li>All Bronze benefits</li>
+                <li>Social media promotion</li>
+                <li>Spotlight on home page</li>
+                <li>20% discount on events</li>
             </ul>
             <button class="close-modal">Close</button>
         </dialog>
         <dialog id="modal-gold">
             <h2>Gold Membership</h2>
             <ul>
-                <li></li>
-                <li></li>
-                <li></li>
+                <li>All Silver benefits</li>
+                <li>30% discount on events</li>
+                <li>VIP access to special events</li>
+                <li>Priority spotlight placement</li>
             </ul>
             <button class="close-modal">Close</button>
         </dialog>
