@@ -32,6 +32,12 @@
         border-bottom: none;
     }
 
+    .navigation li.current a{
+        background-color: #fff;
+        color: #004e91;
+        font-weight: bold;
+    }
+
     .navigation a:hover {
         background-color: #202223;
     }
