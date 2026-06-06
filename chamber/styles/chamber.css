@@ -417,42 +417,42 @@ dialog ul{
     padding: 1rem;
 }
 
-#cards-container section{
+#cards-container div{
     background-color: #fff;
     border: 1px solid #97cff2;
     border-radius: 10px;
     padding: 1rem;
 }
 
-#cards-container section:nth-child(1) {
+#cards-container div:nth-child(1) {
     grid-area: card1;
 }
 
-#cards-container section:nth-child(2) {
+#cards-container div:nth-child(2) {
     grid-area: card2;
 }
 
-#cards-container section:nth-child(3) {
+#cards-container div:nth-child(3) {
     grid-area: card3;
 }
 
-#cards-container section:nth-child(4) {
+#cards-container div:nth-child(4) {
     grid-area: card4;
 }
 
-#cards-container section:nth-child(5) {
+#cards-container div:nth-child(5) {
     grid-area: card5;
 }
 
-#cards-container section:nth-child(6) {
+#cards-container div:nth-child(6) {
     grid-area: card6;
 }
 
-#cards-container section:nth-child(7) {
+#cards-container div:nth-child(7) {
     grid-area: card7;
 }
 
-#cards-container section:nth-child(8) {
+#cards-container div:nth-child(8) {
     grid-area: card8;
 }
 

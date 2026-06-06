@@ -17,7 +17,7 @@ import { places } from '../data/places.mjs';
 
 const container = document.getElementById('cards-container');
 places.forEach(place => {
-    const card = document.createElement('section');
+    const card = document.createElement('div');
     card.innerHTML = `
         <h2>${place.name}</h2>
         <figure>
