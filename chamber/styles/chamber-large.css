@@ -126,9 +126,39 @@
         max-width: 600px;
         margin: 1rem auto;
     }
+
+    #cards-container {
+        grid-template-areas:
+            "card1 card2 card3"
+            "card4 card5 card6"
+            "card7 card8.";
+        grid-template-columns: 1fr 1fr 1fr;
+    }
     /************ FOOTER **********/
     footer {
         border-top: 2px solid #202223;
         margin-top: 40px;
+    }
+}
+
+@media only screen and (min-width:641px) and (max-width:1024px){
+    #cards-container{
+        grid-template-areas: 
+            "card1 card2"
+            "card3 card4"
+            "card5 card6"
+            "card7 card8";
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media only screen and (min-width:1025px){
+    #cards-container img:hover{
+        transform:scale(1.05);
+        transition: transform 0.3s ease;
+    }
+
+    #cards-container section{
+        overflow: hidden;
     }
 }

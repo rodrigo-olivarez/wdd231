@@ -1,5 +1,3 @@
-import { places } from '../data/places.mjs';
-
 const currentYear = new Date().getFullYear();
 document.getElementById("currentYear").textContent = currentYear;
 
@@ -15,6 +13,8 @@ navButton.addEventListener('click', () => {
     navBar.classList.toggle('show');
 });
 
+import { places } from '../data/places.mjs';
+
 const container = document.getElementById('cards-container');
 places.forEach(place => {
     const card = document.createElement('section');
@@ -29,3 +29,24 @@ places.forEach(place => {
     `;
     container.appendChild(card);
 });
+
+const visitMessage = document.getElementById('visit-message');
+const lastVisit = localStorage.getItem('lastVisit');
+const now = Date.now();
+
+if (!lastVisit) {
+    visitMessage.textContent = 'Welcome! Let us know if you have any questions.';
+} else {
+    const diff = now - lastVisit;
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+
+    if (days < 1) {
+        visitMessage.textContent = 'Back so soon! Awesome!';
+    } else if (days === 1) {
+        visitMessage.textContent = 'You last visited 1 day ago.';
+    } else {
+        visitMessage.textContent = `You last visited ${days} days ago.`;
+    }
+}
+
+localStorage.setItem('lastVisit', now);
