@@ -43,7 +43,7 @@
         "schedule": "Tuesday - Friday, 9:00 - 18:00. Saturday and Sunday, 10:00 - 19:00",
         "price": 110,
         "description": "A powerful museum dedicated to promoting respect for human rights. It documents genocides throughout history and encourages visitors to reflect on tolerance and diversity.",
-        "image": "images/Memoria_Tolerancia.jpg",
+        "image": "images/Memoria_Tolerancia.webp",
         "free": false,
         "childrenArea": true
     },
@@ -175,7 +175,7 @@
         "schedule": "Tuesday - Sunday , 11:00 - 17:30",
         "price": 50,
         "description": "One of the most beautiful colonial buildings in Mexico City, birthplace of the Mexican muralist movement. It hosts rotating temporary exhibitions and preserves murals by Diego Rivera and Orozco.",
-        "image": "images/museums/San-Ildefonso.webp",
+        "image": "images/San_Idelfonso.webp",
         "free": false,
         "childrenArea": false
     }

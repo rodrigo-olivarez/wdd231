@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Museums | Final Project</title>
-    <meta name="description" content="Explore all museums in Mexico City's Historic Center. Filter by type, price, and family options">
+    <title>Form-action | Final Project</title>
+    <meta name="description" content="Thank you for joining MuseCen, Your information has been received.">
     <meta name="author" content="Jose Rodrigo Olivarez Marcelino">
     <link rel="stylesheet" href="styles/finalproject.css">
     <link rel="stylesheet" href="styles/finalproject_large.css">
     <script src="scripts/navigation.js" defer></script>
-    <script type="module" src="scripts/museums.js"></script>
+    <script type="module" src="scripts/form-action.js"></script>
     <link rel="icon" href="images/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,6 +18,7 @@
         href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Finlandica+Headline:ital,wght@0,100..900;1,100..900&family=Iosevka+Charon+Mono:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Share+Tech&display=swap"
         rel="stylesheet">
 </head>
+
 <body>
     <header>
         <img src="images/Logo_Project.svg" alt="logo site" width="40" height="40">
@@ -25,39 +27,27 @@
         <nav id="nav-bar" class="navigation">
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li class="current"><a href="museums.html">Museums</a></li>
-                <li><a href="visit.html">Visit</a></li>
+                <li><a href="museums.html">Museums</a></li>
+                <li class="current"><a href="visit.html">Visit</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <h1>MUSEUMS</h1>
-        <div class="museums-menu">
-            <button class="filter-btn all">All</button>
-            <button class="filter-btn">History</button>
-            <button class="filter-btn">Art</button>
-            <button class="filter-btn">Culture</button>
-            <button class="filter-btn">Science</button>
-            <button class="filter-btn">Free</button>
-            <button class="filter-btn">Family</button>
-        </div>
-        <div id="museums-grid" class="museums-grid">
-
-        </div>
+        <h1>We have received your information.</h1>
+        <section class="form-action-info">
+            <p><strong>First Name:</strong> <span id="firstName"></span></p>
+            <p><strong>Last Name:</strong> <span id="lastName"></span></p>
+            <p><strong>Email:</strong> <span id="email"></span></p>
+        </section>
     </main>
-
-    <dialog id="museum-modal">
-        <button id="close-modal">X</button>
-        <div id="modal-content"></div>
-    </dialog>
     <footer>
         <div class="social">
-            <a href="https://www.Instagram.com" target="_blank"><img src="images/instagram.svg" alt="Follow us on Instagram"
-                    width="16" height="16"></a>
-            <a href="https://www.youtube.com" target="_blank"><img src="images/youtube.svg" alt="Watch our Youtube channel"
-                    width="16" height="16"></a>
-            <a href="https://www.facebook.com" target="_blank"><img src="images/facebook.svg" alt="Follow us on Facebook"
-                    width="16" height="16"></a>
+            <a href="https://www.Instagram.com" target="_blank"><img src="images/instagram.svg"
+                    alt="Follow us on Instagram" width="16" height="16"></a>
+            <a href="https://www.youtube.com" target="_blank"><img src="images/youtube.svg"
+                    alt="Watch our Youtube channel" width="16" height="16"></a>
+            <a href="https://www.facebook.com" target="_blank"><img src="images/facebook.svg"
+                    alt="Follow us on Facebook" width="16" height="16"></a>
         </div>
         <p>WDD 231 Class Project</p>
         <p>Jose Rodrigo Olivarez Marcelino</p>
@@ -65,4 +55,5 @@
         <p id="lastModified"></p>
     </footer>
 </body>
+
 </html>

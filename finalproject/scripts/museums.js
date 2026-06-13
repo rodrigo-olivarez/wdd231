@@ -1,25 +1,36 @@
-const featuredGrid = document.getElementById('featured-grid');
-const freeCount = document.getElementById('free-count');
-const childrenCount = document.getElementById('children-count');
+const museumsGrid = document.getElementById('museums-grid');
+const filterBtns = document.querySelectorAll('.filter-btn');
 const modal = document.getElementById('museum-modal');
 const closeModal = document.getElementById('close-modal');
 const modalContent = document.getElementById('modal-content');
+
+let allMuseums = [];
 
 async function loadMuseums() {
     try {
         const response = await fetch('data/museums.json');
         const museums = await response.json();
-        displayFeatured(museums);
-        updateStats(museums);
+        allMuseums = museums;
+
+        const savedFilter = localStorage.getItem('activeFilter') || 'all';
+        setActiveButton(savedFilter);
+        displayMuseums(filterMuseums(savedFilter));
+
     } catch (error) {
+        museumsGrid.innerHTML = `<p>Sorry, we could not load the museums. Please try again later.</p>`;
         console.error('Error loading museums:', error);
     }
 }
 
-function displayFeatured(museums) {
-    const featured = museums.slice(0, 6);
+function filterMuseums(filter) {
+    if (filter === 'All') return allMuseums;
+    if (filter === 'Free') return allMuseums.filter(m => m.free);
+    if (filter === 'Family') return allMuseums.filter(m => m.childrenArea);
+    return allMuseums.filter(m => m.type === filter);
+}
 
-    featuredGrid.innerHTML = featured.map(museum => `
+function displayMuseums(museums) {
+    museumsGrid.innerHTML = museums.map(museum => `
         <div class="museum-card" data-id="${museum.id}" tabindex="0" role="button" aria-label="View details for ${museum.name}">
             <img src="${museum.image}" alt="${museum.name}" width="300" height="140" loading="lazy">
             <div class="museum-card-info">
@@ -34,17 +45,29 @@ function displayFeatured(museums) {
     document.querySelectorAll('.museum-card').forEach(card => {
         card.addEventListener('click', () => {
             const id = parseInt(card.dataset.id);
-            const museum = museums.find(m => m.id === id);
+            const museum = allMuseums.find(m => m.id === id);
             openModal(museum);
+        });
+
+        card.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') card.click();
         });
     });
 }
 
-function updateStats(museums) {
-    const free = museums.filter(m => m.free).length;
-    const children = museums.filter(m => m.childrenArea).length;
-    freeCount.textContent = free;
-    childrenCount.textContent = children;
+filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        const filter = btn.textContent.trim();
+        setActiveButton(filter);
+        displayMuseums(filterMuseums(filter));
+        localStorage.setItem('activeFilter', filter);
+    });
+});
+
+function setActiveButton(filter) {
+    filterBtns.forEach(btn => {
+        btn.classList.toggle('active', btn.textContent.trim() === filter);
+    });
 }
 
 function openModal(museum) {
@@ -61,12 +84,9 @@ function openModal(museum) {
         </div>
     `;
     modal.showModal();
-    saveLastVisited(museum);
 }
 
-closeModal.addEventListener('click', () => {
-    modal.close();
-});
+closeModal.addEventListener('click', () => modal.close());
 
 modal.addEventListener('click', (e) => {
     if (e.target === modal) modal.close();
@@ -75,13 +95,5 @@ modal.addEventListener('click', (e) => {
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') modal.close();
 });
-
-function saveLastVisited(museum) {
-    localStorage.setItem('lastVisited', JSON.stringify({
-        id: museum.id,
-        name: museum.name,
-        type: museum.type
-    }));
-}
 
 loadMuseums();
