@@ -39,22 +39,67 @@
     }
 
     .navigation a:hover {
-        background-color: #202223;
+        background-color: #621708;
+        color: #78bcdd;
     }
 
     /************ INDEX-MAIN **********/
-    .hero {
-        width: 100%;
-        overflow: hidden;
+    .hero-content{
+        display: none;
     }
-
     .hero img {
         width: 100%;
-        height: 400px;
+        height: 350px;
         display: block;
         object-fit: cover;
     }
+    .home-grid-large{
+        display: grid;
+        grid-template-columns: 200px 1fr;
+        gap: 2rem;
+        padding: 2rem;
+    }
 
+    .about-panel{
+        background-color: #d0d0d0;
+        padding: 1rem;
+        border-radius: 10px;
+        align-self: start;
+        top: 10px;
+    }
+
+    .featured-grid{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    /************ MUSEUMS **********/
+    .museums-grid{
+        grid-template-columns: repeat(3, 1fr);
+        padding: 1.5rem;
+    }
+
+    .museums-menu{
+        padding: 1.5rem 2rem;
+    }
+    /************ VISIT **********/
+    .join-container{
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 2rem;
+        gap: 3rem;
+    }
+
+    .join-container form{
+        flex: 1;
+    }
+
+    .map{
+        flex: 1;
+    }
+
+    .map iframe{
+        width: 100%;
+        height: 450px;
+    }
     /************ FOOTER **********/
     footer {
         border-top: 2px solid #202223;

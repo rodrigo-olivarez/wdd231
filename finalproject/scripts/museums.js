@@ -1,9 +1,3 @@
-const museumsGrid = document.getElementById('museums-grid');
-const filterBtns = document.querySelectorAll('.filter-btn');
-const modal = document.getElementById('museum-modal');
-const closeModal = document.getElementById('close-modal');
-const modalContent = document.getElementById('modal-content');
-
 let allMuseums = [];
 
 async function loadMuseums() {
@@ -12,12 +6,12 @@ async function loadMuseums() {
         const museums = await response.json();
         allMuseums = museums;
 
-        const savedFilter = localStorage.getItem('activeFilter') || 'all';
+        const savedFilter = localStorage.getItem('activeFilter') || 'All';
         setActiveButton(savedFilter);
         displayMuseums(filterMuseums(savedFilter));
 
     } catch (error) {
-        museumsGrid.innerHTML = `<p>Sorry, we could not load the museums. Please try again later.</p>`;
+        document.getElementById('museums-grid').innerHTML = `<p>Sorry, we could not load the museums. Please try again later.</p>`;
         console.error('Error loading museums:', error);
     }
 }
@@ -30,6 +24,8 @@ function filterMuseums(filter) {
 }
 
 function displayMuseums(museums) {
+    const museumsGrid = document.getElementById('museums-grid');
+
     museumsGrid.innerHTML = museums.map(museum => `
         <div class="museum-card" data-id="${museum.id}" tabindex="0" role="button" aria-label="View details for ${museum.name}">
             <img src="${museum.image}" alt="${museum.name}" width="300" height="140" loading="lazy">
@@ -55,7 +51,13 @@ function displayMuseums(museums) {
     });
 }
 
-filterBtns.forEach(btn => {
+function setActiveButton(filter) {
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.textContent.trim() === filter);
+    });
+}
+
+document.querySelectorAll('.filter-btn').forEach(btn => {
     btn.addEventListener('click', () => {
         const filter = btn.textContent.trim();
         setActiveButton(filter);
@@ -64,13 +66,11 @@ filterBtns.forEach(btn => {
     });
 });
 
-function setActiveButton(filter) {
-    filterBtns.forEach(btn => {
-        btn.classList.toggle('active', btn.textContent.trim() === filter);
-    });
-}
-
 function openModal(museum) {
+    const modal = document.getElementById('museum-modal');
+    const closeModal = document.getElementById('close-modal');
+    const modalContent = document.getElementById('modal-content');
+
     modalContent.innerHTML = `
         <img src="${museum.image}" alt="${museum.name}" width="500" height="200" loading="lazy">
         <span class="modal-type">${museum.type}</span>
@@ -83,17 +83,18 @@ function openModal(museum) {
             <span>👨‍👩‍👧 Family friendly: ${museum.childrenArea ? 'Yes' : 'No'}</span>
         </div>
     `;
+
     modal.showModal();
+    closeModal.addEventListener('click', () => modal.close());
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) modal.close();
+    });
 }
 
-closeModal.addEventListener('click', () => modal.close());
-
-modal.addEventListener('click', (e) => {
-    if (e.target === modal) modal.close();
-});
-
 document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') modal.close();
+    if (e.key === 'Escape') {
+        document.getElementById('museum-modal').close();
+    }
 });
 
 loadMuseums();

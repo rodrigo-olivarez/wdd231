@@ -1,26 +1,20 @@
-const featuredGrid = document.getElementById('featured-grid');
-const freeCount = document.getElementById('free-count');
-const childrenCount = document.getElementById('children-count');
-const modal = document.getElementById('museum-modal');
-const closeModal = document.getElementById('close-modal');
-const modalContent = document.getElementById('modal-content');
-
 async function loadMuseums() {
     try {
         const response = await fetch('data/museums.json');
         const museums = await response.json();
         displayFeatured(museums);
-        updateStats(museums);
     } catch (error) {
         console.error('Error loading museums:', error);
     }
 }
 
 function displayFeatured(museums) {
-    const featured = museums.slice(0, 6);
+    const featuredGrid = document.getElementById('featured-grid');
+    const shuffled = [...museums].sort(() => Math.random() - 0.5);
+    const featured = shuffled.slice(0, 6);
 
     featuredGrid.innerHTML = featured.map(museum => `
-        <div class="museum-card" data-id="${museum.id}" tabindex="0" role="button" aria-label="View details for ${museum.name}">
+        <div class="museum-card" data-id="${museum.id}">
             <img src="${museum.image}" alt="${museum.name}" width="300" height="140" loading="lazy">
             <div class="museum-card-info">
                 <h3>${museum.name}</h3>
@@ -40,16 +34,13 @@ function displayFeatured(museums) {
     });
 }
 
-function updateStats(museums) {
-    const free = museums.filter(m => m.free).length;
-    const children = museums.filter(m => m.childrenArea).length;
-    freeCount.textContent = free;
-    childrenCount.textContent = children;
-}
-
 function openModal(museum) {
+    const modal = document.getElementById('museum-modal');
+    const closeModal = document.getElementById('close-modal');
+    const modalContent = document.getElementById('modal-content');
+
     modalContent.innerHTML = `
-        <img src="${museum.image}" alt="${museum.name}" width="500" height="200" loading="lazy">
+        <img src="${museum.image}" alt="${museum.name}" width="450" height="200" loading="lazy">
         <span class="modal-type">${museum.type}</span>
         <h2>${museum.name}</h2>
         <p>${museum.description}</p>
@@ -60,20 +51,21 @@ function openModal(museum) {
             <span>👨‍👩‍👧 Family friendly: ${museum.childrenArea ? 'Yes' : 'No'}</span>
         </div>
     `;
+
     modal.showModal();
     saveLastVisited(museum);
+
+    closeModal.addEventListener('click', () => modal.close());
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) modal.close();
+    });
 }
 
-closeModal.addEventListener('click', () => {
-    modal.close();
-});
-
-modal.addEventListener('click', (e) => {
-    if (e.target === modal) modal.close();
-});
-
 document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') modal.close();
+    if (e.key === 'Escape') {
+        const modal = document.getElementById('museum-modal');
+        modal.close();
+    }
 });
 
 function saveLastVisited(museum) {

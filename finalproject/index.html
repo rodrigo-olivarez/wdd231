@@ -16,6 +16,10 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Finlandica+Headline:ital,wght@0,100..900;1,100..900&family=Iosevka+Charon+Mono:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Share+Tech&display=swap"
         rel="stylesheet">
+    <meta property="og:title" content="MuseCen — Historic Center Museums Guide">
+    <meta property="og:description" content="Explore the cultural heart of Mexico City. Find museums, schedules, and plan your visit.">
+    <meta property="og:image" content="images/Hero-Img.webp">
+    <meta property="og:url" content="https://rodrigo-olivarez.github.io/wdd231/finalproject/index.html">
 </head>
 <body>
     <header>
@@ -31,18 +35,16 @@
         </nav>
     </header>
     <main>
-        <section class="hero">
-            <div class="hero-content">
-                <p>Mexico City · Historic Center</p>
-                <h1>Explore the museums<br>at the heart of the city</h1>
-                <p>15 museums, one neighborhood. Find the perfect visit for you.</p>
-            </div>
-            <div class="hero-image">
-                <img src="images/Hero_Img.webp" alt="Mexico City's Historic Center" width="800" height="500"
-                    loading="eager">
-            </div>
-        </section>
-        <section class="home-grid" aria-label="About and featured museums">
+        <div class="hero-content">
+            <p>Mexico City · Historic Center</p>
+            <h1>Explore the museums<br>at the heart of the city</h1>
+            <p>15 museums, one neighborhood. Find the perfect visit for you.</p>
+        </div>
+        <div class="hero-image">
+            <img src="images/Hero_Img.webp" alt="Mexico City's Historic Center" width="800" height="500"
+                loading="eager">
+        </div>
+        <div class="home-grid-large">
             <div class="about-panel">
                 <h2>About MuseCen</h2>
                 <p>The Historic Center of Mexico City is home to some of the most remarkable museums in Latin America — all
@@ -56,8 +58,7 @@
                 <div id="featured-grid" class="featured-grid">
                 </div>
             </div>
-        </section>
-        
+        </div>
         <dialog id="museum-modal">
             <button id="close-modal">X</button>
             <div id="modal-content"></div>
